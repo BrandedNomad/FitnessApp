@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = "mongodb://127.0.0.1:27017/fitness-app";
+const connectionString = process.env.MONGO_CONNECTION_STRING;
 
 mongoose.connect(connectionString,{useNewUrlParser:true,useUnifiedTopology:true,useCreateIndex:true,useFindAndModify:false} );
 
